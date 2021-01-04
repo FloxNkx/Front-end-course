@@ -33,7 +33,7 @@
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a onclick="show('loginModal')">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -93,8 +93,7 @@
                     <img src="img/logo.png" alt="" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 mt-4">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal"
-                        data-target="#reserveModal">Reserve Table</a>
+                    <a role="button" onclick="show('reserveModal')" class="btn btn-block nav-link btn-warning">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -350,6 +349,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
 
     <script>
         $(document).ready(function(){
@@ -367,6 +367,10 @@
                 }
             });
         });
+
+        function show(modal) {
+            $("#" + modal).modal();
+        }
     </script>
 </body>
 
